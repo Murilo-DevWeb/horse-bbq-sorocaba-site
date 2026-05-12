@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -62,15 +63,25 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.25rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.12 0 0);
+  --brand-red: oklch(0.55 0.22 27);
+  --brand-red-deep: oklch(0.45 0.21 27);
+  --ink: oklch(0.12 0 0);
+  --ink-soft: oklch(0.22 0 0);
+  --ash: oklch(0.55 0 0);
+  --bone: oklch(0.97 0.005 60);
+  --gradient-ember: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-red-deep) 100%);
+  --shadow-ember: 0 20px 50px -20px color-mix(in oklab, var(--brand-red) 40%, transparent);
+  --shadow-ink: 0 30px 60px -30px color-mix(in oklab, var(--ink) 50%, transparent);
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.55 0.22 27);
+  --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
@@ -133,12 +144,44 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     border-color: var(--color-border);
   }
-
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Archivo Black', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
   }
 }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .bg-ember { background: var(--gradient-ember); }
+  .shadow-ember { box-shadow: var(--shadow-ember); }
+  .shadow-ink { box-shadow: var(--shadow-ink); }
+  .grain {
+    background-image: radial-gradient(circle at 1px 1px, oklch(0 0 0 / 0.04) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+}
+
+@keyframes smoke {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+  50% { transform: translateY(-20px) scale(1.1); opacity: 0.7; }
+}
+.animate-smoke { animation: smoke 6s ease-in-out infinite; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.8s var(--transition-smooth) both; }
+
