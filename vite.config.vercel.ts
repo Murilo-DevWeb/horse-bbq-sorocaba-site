@@ -14,5 +14,8 @@ export default defineConfig({
   build: {
     outDir: "dist-spa",
     emptyOutDir: true,
+    rollupOptions: {
+      input: "index.vercel.html",
+    },
   },
 });
