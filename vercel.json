@@ -1,4 +1,6 @@
 {
+  "buildCommand": "bun run build:vercel",
+  "outputDirectory": "dist-spa",
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
