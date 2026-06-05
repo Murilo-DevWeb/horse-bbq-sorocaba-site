@@ -72,10 +72,10 @@ function Landing() {
 function Nav() {
   const [open, setOpen] = useState(false);
   const links = [
-    { href: "#cardapio", label: "Cardápio" },
-    { href: "#sobre", label: "Sobre" },
-    { href: "#depoimentos", label: "Depoimentos" },
-    { href: "#contato", label: "Contato" },
+    { href: "#cardapio", label: "O rango" },
+    { href: "#sobre", label: "Quem somos" },
+    { href: "#depoimentos", label: "Recadinhos" },
+    { href: "#contato", label: "Cola aqui" },
   ];
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-background/85 backdrop-blur-md border-b border-black/5">
@@ -93,7 +93,7 @@ function Nav() {
             </a>
           ))}
           <a href="#contato" className="inline-flex items-center gap-2 bg-ink text-white px-4 py-2 rounded-sm text-sm font-semibold hover:bg-[var(--brand-red)] transition-colors" style={{backgroundColor:'var(--ink)'}}>
-            Reservar <ArrowRight className="w-4 h-4" />
+            Bora reservar <ArrowRight className="w-4 h-4" />
           </a>
         </nav>
         <button onClick={() => setOpen(!open)} className="md:hidden p-2" aria-label="Menu">
@@ -123,37 +123,37 @@ function Hero() {
         <div className="lg:col-span-6 animate-fade-up">
           <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-6">
             <span className="w-8 h-px bg-[var(--brand-red)]" />
-            Sorocaba · SP
+            Sorocaba · SP · No capricho
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] text-balance">
-            Fogo lento.<br />
-            Fumaça honesta.<br />
-            <span className="text-[var(--brand-red)]">Sabor sem pressa.</span>
+            Senta,<br />
+            relaxa<br />
+            <span className="text-[var(--brand-red)]">e come bem.</span>
           </h1>
           <p className="mt-8 text-lg text-[var(--ink-soft)] max-w-lg leading-relaxed">
-            Carnes defumadas por horas, hambúrgueres autorais e bebidas pra acompanhar.
-            Aqui ninguém apressa o que é bom.
+            A gente passa horas cuidando da carne pra você passar minutos
+            agradecendo. Defumados, burgers monstros e bebida gelada te esperando.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a href="#cardapio" className="bg-ember text-white px-7 py-4 rounded-sm font-semibold shadow-ember hover:translate-y-[-2px] transition-transform inline-flex items-center gap-2">
-              Ver o cardápio <ArrowRight className="w-4 h-4" />
+              Bora ver o rango <ArrowRight className="w-4 h-4" />
             </a>
             <a href="#contato" className="border-2 border-[var(--ink)] px-7 py-4 rounded-sm font-semibold hover:bg-[var(--ink)] hover:text-white transition-colors">
-              Como chegar
+              Onde a gente tá
             </a>
           </div>
           <div className="mt-12 flex gap-8 text-sm">
             <div>
               <div className="font-black text-2xl">14h+</div>
-              <div className="text-[var(--ash)]">de defumação</div>
+              <div className="text-[var(--ash)]">na fumaça</div>
             </div>
             <div className="border-l border-black/10 pl-8">
               <div className="font-black text-2xl">100%</div>
-              <div className="text-[var(--ash)]">lenha de carvalho</div>
+              <div className="text-[var(--ash)]">lenha de verdade</div>
             </div>
             <div className="border-l border-black/10 pl-8">
               <div className="font-black text-2xl">★ 4.9</div>
-              <div className="text-[var(--ash)]">avaliação</div>
+              <div className="text-[var(--ash)]">a galera aprovou</div>
             </div>
           </div>
         </div>
@@ -163,8 +163,8 @@ function Hero() {
             <div className="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-[var(--brand-red)]/10" />
           </div>
           <div className="absolute -bottom-6 -left-6 bg-background p-5 rounded-sm shadow-ink max-w-[220px] hidden md:block">
-            <div className="text-xs uppercase tracking-wider text-[var(--brand-red)] font-bold mb-1">Especialidade</div>
-            <div className="font-black text-lg leading-tight">Brisket 14h no smoker</div>
+            <div className="text-xs uppercase tracking-wider text-[var(--brand-red)] font-bold mb-1">Xodó da casa</div>
+            <div className="font-black text-lg leading-tight">Brisket de 14 horas</div>
           </div>
         </div>
       </div>
@@ -177,25 +177,25 @@ function Services() {
     {
       icon: Beef,
       title: "Carne Defumada",
-      desc: "Brisket, costela e pulled pork defumados por até 16 horas em smoker com lenha de carvalho.",
+      desc: "Brisket, costela e pulled pork que passam horas no smoker até virarem aquilo que você sonhou ontem à noite.",
     },
     {
       icon: Sandwich,
-      title: "Burgers Autorais",
-      desc: "Hambúrgueres com blend defumado da casa, pão brioche e ingredientes selecionados.",
+      title: "Burgers Monstros",
+      desc: "Blend defumado da casa, pão brioche macio e ingredientes escolhidos um por um. Sem frescura, só sabor.",
     },
     {
       icon: Wine,
-      title: "Bebidas Geladas",
-      desc: "Cervejas artesanais, drinks da casa, refrigerantes e sucos pra fechar a experiência.",
+      title: "Bebida Gelada",
+      desc: "Cerveja artesanal, drink autoral, refri e suco. Pede o que quiser, a gente combina certinho.",
     },
   ];
   return (
     <section id="cardapio" className="py-24 md:py-32 relative" style={{backgroundColor:'var(--bone)'}}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">O que servimos</div>
-          <h2 className="text-4xl md:text-5xl text-balance">Comida feita com tempo. <span className="text-[var(--ash)]">Não com atalhos.</span></h2>
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">O rango</div>
+          <h2 className="text-4xl md:text-5xl text-balance">Comida boa não tem atalho. <span className="text-[var(--ash)]">E aqui ninguém tenta.</span></h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {items.map((it, i) => (
@@ -217,9 +217,9 @@ function Services() {
             <Quote className="w-10 h-10 text-[var(--brand-red)]" />
             <div>
               <p className="text-2xl font-medium leading-snug">
-                "Defumar é paciência. Cada peça sai do smoker no ponto certo — não no horário do cliente."
+                "A carne sai quando ela tá pronta. Não quando o cliente tá com pressa. E acredita: vale a espera."
               </p>
-              <div className="mt-6 text-sm text-white/60 uppercase tracking-wider">— Filosofia da casa</div>
+              <div className="mt-6 text-sm text-white/60 uppercase tracking-wider">— O jeito Horse de ser</div>
             </div>
           </div>
         </div>
@@ -242,26 +242,26 @@ function About() {
           </div>
         </div>
         <div>
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Sobre o Horse</div>
-          <h2 className="text-4xl md:text-5xl mb-6 text-balance">Não é churrasco de domingo. É barbecue.</h2>
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">A nossa história</div>
+          <h2 className="text-4xl md:text-5xl mb-6 text-balance">Aqui não é churrasco de domingo. É outro nível.</h2>
           <div className="space-y-5 text-[var(--ink-soft)] leading-relaxed text-lg">
             <p>
-              O Horse BBQ nasceu em Sorocaba da obsessão por uma técnica antiga: fogo indireto, fumaça
-              de madeira nobre e horas de paciência transformando carne em algo que beira o ritual.
+              O Horse nasceu em Sorocaba de uma teimosia boa: fazer barbecue do jeito
+              que o pessoal do Texas faz. Fogo manso, fumaça de madeira boa e paciência de sobra.
             </p>
             <p>
-              Cada brisket passa 14 horas no smoker. Cada costela é massageada com nosso rub da casa.
-              Cada hambúrguer leva o mesmo blend defumado que serviu de base pra nossa fama.
+              Cada brisket dorme 14 horas no smoker. Cada costela leva nosso rub na medida certa.
+              E cada hambúrguer carrega o mesmo blend defumado que fez a gente virar referência por aqui.
             </p>
             <p>
-              Aqui não tem pressa, não tem firula, não tem atalho. Tem fogo, fumaça e respeito pelo ingrediente.
+              Sem pressa, sem firula, sem economizar onde não pode. Só fogo, fumaça e carne tratada com carinho.
             </p>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-6">
             {[
-              { n: "16h", l: "Defumação máxima" },
-              { n: "5+", l: "Cortes na casa" },
-              { n: "1", l: "Forma certa de fazer" },
+              { n: "16h", l: "no smoker, fácil" },
+              { n: "5+", l: "cortes na casa" },
+              { n: "1", l: "jeito certo: o nosso" },
             ].map((s, i) => (
               <div key={i} className="border-t-2 border-[var(--ink)] pt-3">
                 <div className="font-black text-3xl">{s.n}</div>
@@ -279,18 +279,18 @@ function Testimonials() {
   const reviews = [
     {
       name: "Rafael M.",
-      role: "Cliente desde 2022",
-      text: "Brisket no ponto, fumaça na medida certa. Único lugar de Sorocaba que entrega BBQ americano de verdade. Sem enrolação.",
+      role: "Cliente da casa desde 2022",
+      text: "Brisket no ponto, fumaça na medida. Único lugar de Sorocaba que entrega BBQ americano de verdade. Não tem pra ninguém.",
     },
     {
       name: "Camila T.",
-      role: "Avaliação Google",
-      text: "O burger defumado é absurdo. A pegada do lugar é despojada, atendimento simpático e a carne… a carne fala por si.",
+      role: "Deixou no Google",
+      text: "O burger defumado é coisa de outro mundo. Lugar despojado, pessoal super gente boa e a carne… ai, a carne.",
     },
     {
       name: "Bruno A.",
-      role: "Cliente recorrente",
-      text: "Já fui em barbecue em Austin e pode acreditar: o Horse não fica devendo. Costela desmancha. Voltarei sempre.",
+      role: "Já virou frequência",
+      text: "Comi barbecue em Austin e pode confiar: o Horse não fica devendo nada. Costela desmancha na boca. Volto com a família toda.",
     },
   ];
   return (
@@ -298,8 +298,8 @@ function Testimonials() {
       <div className="absolute inset-0 grain opacity-20" />
       <div className="max-w-7xl mx-auto px-6 relative">
         <div className="max-w-2xl mb-16">
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Quem comeu, contou</div>
-          <h2 className="text-4xl md:text-5xl text-balance">Não somos nós dizendo. <span className="text-white/50">São eles.</span></h2>
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Quem veio, voltou contando</div>
+          <h2 className="text-4xl md:text-5xl text-balance">Não somos nós falando. <span className="text-white/50">É a galera.</span></h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {reviews.map((r, i) => (
@@ -333,30 +333,30 @@ function Contact() {
     <section id="contato" className="py-24 md:py-32" style={{backgroundColor:'var(--bone)'}}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Vem comer</div>
-          <h2 className="text-4xl md:text-5xl text-balance">A fumaça já tá no ar.</h2>
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Cola aqui</div>
+          <h2 className="text-4xl md:text-5xl text-balance">A fumaça já tá rolando. Falta você.</h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="space-y-6">
             <div className="bg-background p-6 rounded-sm border border-black/5 flex gap-4">
               <div className="w-12 h-12 rounded-sm bg-ember grid place-items-center shrink-0"><MapPin className="w-5 h-5 text-white"/></div>
               <div>
-                <div className="font-bold mb-1">Endereço</div>
+                <div className="font-bold mb-1">Onde a gente fica</div>
                 <div className="text-[var(--ink-soft)]">Rua Exemplo, 123 — Centro<br/>Sorocaba, SP</div>
               </div>
             </div>
             <div className="bg-background p-6 rounded-sm border border-black/5 flex gap-4">
               <div className="w-12 h-12 rounded-sm bg-ember grid place-items-center shrink-0"><Phone className="w-5 h-5 text-white"/></div>
               <div>
-                <div className="font-bold mb-1">Telefone</div>
+                <div className="font-bold mb-1">Liga aí</div>
                 <a href="tel:+551532225555" className="text-[var(--ink-soft)] hover:text-[var(--brand-red)]">(15) 3222-5555</a>
               </div>
             </div>
             <div className="bg-background p-6 rounded-sm border border-black/5 flex gap-4">
               <div className="w-12 h-12 rounded-sm bg-ember grid place-items-center shrink-0"><Clock className="w-5 h-5 text-white"/></div>
               <div>
-                <div className="font-bold mb-1">Horário</div>
-                <div className="text-[var(--ink-soft)]">Ter–Dom · 18h às 23h<br/>Segunda fechado</div>
+                <div className="font-bold mb-1">Quando abrimos</div>
+                <div className="text-[var(--ink-soft)]">Ter–Dom · 18h às 23h<br/>Segunda a gente descansa</div>
               </div>
             </div>
             <div className="aspect-[16/10] rounded-sm overflow-hidden border border-black/10">
@@ -370,27 +370,27 @@ function Contact() {
           </div>
           <form onSubmit={onSubmit} className="bg-background p-8 rounded-sm border border-black/5 space-y-5">
             <div>
-              <label className="block text-sm font-bold mb-2">Nome</label>
+              <label className="block text-sm font-bold mb-2">Como te chamam?</label>
               <input name="nome" required className="w-full px-4 py-3 border border-black/10 rounded-sm focus:border-[var(--brand-red)] outline-none" />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-bold mb-2">E-mail</label>
+                <label className="block text-sm font-bold mb-2">Seu e-mail</label>
                 <input name="email" type="email" required className="w-full px-4 py-3 border border-black/10 rounded-sm focus:border-[var(--brand-red)] outline-none" />
               </div>
               <div>
-                <label className="block text-sm font-bold mb-2">Telefone</label>
+                <label className="block text-sm font-bold mb-2">Zap / telefone</label>
                 <input name="telefone" className="w-full px-4 py-3 border border-black/10 rounded-sm focus:border-[var(--brand-red)] outline-none" />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-bold mb-2">Mensagem</label>
+              <label className="block text-sm font-bold mb-2">Manda o papo</label>
               <textarea name="mensagem" required rows={5} className="w-full px-4 py-3 border border-black/10 rounded-sm focus:border-[var(--brand-red)] outline-none resize-none" />
             </div>
             <button type="submit" className="w-full bg-ember text-white py-4 rounded-sm font-semibold shadow-ember hover:translate-y-[-2px] transition-transform inline-flex items-center justify-center gap-2">
-              {sent ? "Abrindo seu e-mail…" : "Enviar mensagem"} <ArrowRight className="w-4 h-4" />
+              {sent ? "Abrindo seu e-mail…" : "Mandar mensagem"} <ArrowRight className="w-4 h-4" />
             </button>
-            <p className="text-xs text-[var(--ash)] text-center">Respondemos em até 24h. Pra reservas urgentes, ligue.</p>
+            <p className="text-xs text-[var(--ash)] text-center">A gente responde rapidinho. Pra reserva de última hora, manda no Zap.</p>
           </form>
         </div>
       </div>
@@ -409,20 +409,20 @@ function Footer() {
               <span className="font-black text-lg">HORSE <span className="text-[var(--brand-red)]">BBQ</span></span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Barbecue americano feito em Sorocaba com fogo lento, fumaça honesta e zero pressa.
+              Barbecue raiz, feito em Sorocaba com fogo manso, fumaça de verdade e zero pressa.
             </p>
           </div>
           <div>
-            <div className="text-xs uppercase tracking-wider text-[var(--brand-red)] font-bold mb-4">Navegar</div>
+            <div className="text-xs uppercase tracking-wider text-[var(--brand-red)] font-bold mb-4">Dar uma volta</div>
             <ul className="space-y-2 text-sm text-white/70">
-              <li><a href="#cardapio" className="hover:text-white">Cardápio</a></li>
-              <li><a href="#sobre" className="hover:text-white">Sobre</a></li>
-              <li><a href="#depoimentos" className="hover:text-white">Depoimentos</a></li>
-              <li><a href="#contato" className="hover:text-white">Contato</a></li>
+              <li><a href="#cardapio" className="hover:text-white">O rango</a></li>
+              <li><a href="#sobre" className="hover:text-white">Quem somos</a></li>
+              <li><a href="#depoimentos" className="hover:text-white">Recadinhos</a></li>
+              <li><a href="#contato" className="hover:text-white">Cola aqui</a></li>
             </ul>
           </div>
           <div>
-            <div className="text-xs uppercase tracking-wider text-[var(--brand-red)] font-bold mb-4">Siga a fumaça</div>
+            <div className="text-xs uppercase tracking-wider text-[var(--brand-red)] font-bold mb-4">Cola com a gente</div>
             <div className="flex gap-3">
               <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-sm border border-white/15 grid place-items-center hover:bg-ember hover:border-transparent transition-colors"><Instagram className="w-5 h-5"/></a>
               <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-sm border border-white/15 grid place-items-center hover:bg-ember hover:border-transparent transition-colors"><Facebook className="w-5 h-5"/></a>
@@ -433,7 +433,7 @@ function Footer() {
         </div>
         <div className="pt-6 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/40">
           <div>© {new Date().getFullYear()} Horse BBQ — Sorocaba, SP. Todos os direitos reservados.</div>
-          <div>Feito com fogo e fumaça.</div>
+          <div>Feito com fogo, fumaça e um café forte.</div>
         </div>
       </div>
     </footer>
