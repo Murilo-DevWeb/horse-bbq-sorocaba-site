@@ -239,30 +239,32 @@ function About() {
           </div>
           <div className="absolute -top-6 -right-6 bg-ember text-white p-6 rounded-sm hidden md:block">
             <div className="font-black text-3xl">2019</div>
-            <div className="text-xs uppercase tracking-wider">Cuidando de você</div>
+            <div className="text-xs uppercase tracking-wider">Fazendo com carinho</div>
           </div>
         </div>
         <div>
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Nossa história</div>
-          <h2 className="text-4xl md:text-5xl mb-6 text-balance">Um cantinho em Sorocaba onde a carne é tratada com carinho.</h2>
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">A gente</div>
+          <h2 className="text-4xl md:text-5xl mb-6 text-balance">Um espaço em Sorocaba para quem aprecia o feito à mão.</h2>
           <div className="space-y-5 text-[var(--ink-soft)] leading-relaxed text-lg">
             <p>
-              O Horse nasceu do sonho de trazer para Sorocaba um barbecue feito com verdade.
-              Fogo manso, madeira selecionada e aquele cuidado de quem ama o que faz.
+              O Horse começou com uma ideia simples: trazer para perto de casa o tipo de barbecue
+              que a gente só encontrava em viagens. Onde a fumaça conta uma história e a carne
+              fala por si.
             </p>
             <p>
-              Cada brisket descansa 14 horas no smoker. Cada costela recebe o tempero na medida certa.
-              E cada hambúrguer carrega o mesmo blend defumado que conquistou quem já passou por aqui.
+              Aqui, cada brisket passa horas no smoker, cada tempero é pensado, e cada prato
+              que sai da cozinha carrega o jeito particular de quem cozinha com atenção.
             </p>
             <p>
-              Sem pressa, sem complicação. Só o prazer de cozinhar bem e receber bem.
+              Não temos fórmulas prontas. Temos só o prazer de receber bem, servir com cuidado
+              e ver você voltar.
             </p>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-6">
             {[
-              { n: "16h", l: "de carinho no smoker" },
+              { n: "16h", l: "no fogo baixo" },
               { n: "5+", l: "cortes especiais" },
-              { n: "1", l: "jeito Horse de fazer" },
+              { n: "1", l: "jeito de fazer" },
             ].map((s, i) => (
               <div key={i} className="border-t-2 border-[var(--ink)] pt-3">
                 <div className="font-black text-3xl">{s.n}</div>
@@ -281,17 +283,17 @@ function Testimonials() {
     {
       name: "Rafael M.",
       role: "Cliente desde 2022",
-      text: "Brisket perfeito, fumaça na medida. É o único lugar em Sorocaba que me faz sentir que estou em um barbecue de verdade. Sensacional.",
+      text: "Brisket impecável, fumaça na medida certa. É o lugar em Sorocaba que mais me lembra um bom barbecue americano. Sempre uma experiência.",
     },
     {
       name: "Camila T.",
       role: "Avaliou no Google",
-      text: "O hambúrguer defumado é incrível. O ambiente é super agradável, o atendimento é caloroso e a carne… simplesmente deliciosa.",
+      text: "O hambúrguer defumado é surpreendente. Ambiente agradável, atendimento gentil e uma carne que realmente faz diferença.",
     },
     {
       name: "Bruno A.",
       role: "Cliente frequente",
-      text: "Comi barbecue em Austin e posso dizer: o Horse está no mesmo nível. A costela desmancha na boca. Levo minha família toda vez que posso.",
+      text: "Experimentei barbecue em Austin e posso dizer que o Horse honra bem a tradição. Costela que desmancha na boca. Minha família adora.",
     },
   ];
   return (
@@ -299,8 +301,8 @@ function Testimonials() {
       <div className="absolute inset-0 grain opacity-20" />
       <div className="max-w-7xl mx-auto px-6 relative">
         <div className="max-w-2xl mb-16">
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Quem provou, amou</div>
-          <h2 className="text-4xl md:text-5xl text-balance">Palavras de quem já se sentiu em casa. <span className="text-white/50">E voltou.</span></h2>
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Opiniões</div>
+          <h2 className="text-4xl md:text-5xl text-balance">Quem passa por aqui, costuma voltar. <span className="text-white/50">E trazer companhia.</span></h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {reviews.map((r, i) => (
@@ -334,8 +336,8 @@ function Contact() {
     <section id="contato" className="py-24 md:py-32" style={{backgroundColor:'var(--bone)'}}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Contato</div>
-          <h2 className="text-4xl md:text-5xl text-balance">A porta está aberta. Venha nos conhecer.</h2>
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Fale com a gente</div>
+          <h2 className="text-4xl md:text-5xl text-balance">Será um prazer te receber.</h2>
         </div>
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="space-y-6">
@@ -357,7 +359,7 @@ function Contact() {
               <div className="w-12 h-12 rounded-sm bg-ember grid place-items-center shrink-0"><Clock className="w-5 h-5 text-white"/></div>
               <div>
                 <div className="font-bold mb-1">Horário de funcionamento</div>
-                <div className="text-[var(--ink-soft)]">Ter–Dom · 18h às 23h<br/>Segunda é dia de descansar</div>
+                <div className="text-[var(--ink-soft)]">Ter–Dom · 18h às 23h<br/>Segunda é dia de descanso</div>
               </div>
             </div>
             <div className="aspect-[16/10] rounded-sm overflow-hidden border border-black/10">
@@ -391,7 +393,7 @@ function Contact() {
             <button type="submit" className="w-full bg-ember text-white py-4 rounded-sm font-semibold shadow-ember hover:translate-y-[-2px] transition-transform inline-flex items-center justify-center gap-2">
               {sent ? "Abrindo seu e-mail…" : "Enviar mensagem"} <ArrowRight className="w-4 h-4" />
             </button>
-            <p className="text-xs text-[var(--ash)] text-center">Responderemos o mais rápido possível. Para reservas de última hora, prefira o WhatsApp.</p>
+            <p className="text-xs text-[var(--ash)] text-center">Respondemos em breve. Para reservas no mesmo dia, o WhatsApp costuma ser mais rápido.</p>
           </form>
         </div>
       </div>
@@ -410,16 +412,16 @@ function Footer() {
               <span className="font-black text-lg">HORSE <span className="text-[var(--brand-red)]">BBQ</span></span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Barbecue artesanal em Sorocaba, feito com fogo manso, fumaça de verdade e muito carinho.
+              Barbecue artesanal em Sorocaba, feito com fogo manso, fumaça de verdade e muita atenção.
             </p>
           </div>
           <div>
             <div className="text-xs uppercase tracking-wider text-[var(--brand-red)] font-bold mb-4">Navegar</div>
             <ul className="space-y-2 text-sm text-white/70">
-              <li><a href="#cardapio" className="hover:text-white">Cardápio</a></li>
-              <li><a href="#sobre" className="hover:text-white">Quem somos</a></li>
-              <li><a href="#depoimentos" className="hover:text-white">Depoimentos</a></li>
-              <li><a href="#contato" className="hover:text-white">Contato</a></li>
+              <li><a href="#cardapio" className="hover:text-white">O que servimos</a></li>
+              <li><a href="#sobre" className="hover:text-white">A gente</a></li>
+              <li><a href="#depoimentos" className="hover:text-white">Opiniões</a></li>
+              <li><a href="#contato" className="hover:text-white">Fale com a gente</a></li>
             </ul>
           </div>
           <div>
@@ -434,7 +436,7 @@ function Footer() {
         </div>
         <div className="pt-6 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/40">
           <div>© {new Date().getFullYear()} Horse BBQ — Sorocaba, SP. Todos os direitos reservados.</div>
-          <div>Feito com fogo, fumaça e muito carinho.</div>
+          <div>Feito com tempo, tempero e atenção.</div>
         </div>
       </div>
     </footer>
