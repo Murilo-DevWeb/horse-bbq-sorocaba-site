@@ -72,10 +72,10 @@ function Landing() {
 function Nav() {
   const [open, setOpen] = useState(false);
   const links = [
-    { href: "#cardapio", label: "Cardápio" },
-    { href: "#sobre", label: "Quem somos" },
-    { href: "#depoimentos", label: "Depoimentos" },
-    { href: "#contato", label: "Contato" },
+    { href: "#cardapio", label: "O que servimos" },
+    { href: "#sobre", label: "A gente" },
+    { href: "#depoimentos", label: "Opiniões" },
+    { href: "#contato", label: "Fale com a gente" },
   ];
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-background/85 backdrop-blur-md border-b border-black/5">
