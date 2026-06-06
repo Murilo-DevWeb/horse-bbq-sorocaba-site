@@ -123,23 +123,24 @@ function Hero() {
         <div className="lg:col-span-6 animate-fade-up">
           <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-6">
             <span className="w-8 h-px bg-[var(--brand-red)]" />
-            Sorocaba · SP · Feito com carinho
+            Sorocaba · SP · Feito com calma
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] leading-[0.95] text-balance">
-            Um lugar<br />
-            acolhedor,<br />
-            <span className="text-[var(--brand-red)]">cheio de sabor.</span>
+            Sabor que<br />
+            vem devagar,<br />
+            <span className="text-[var(--brand-red)]">e fica na memória.</span>
           </h1>
           <p className="mt-8 text-lg text-[var(--ink-soft)] max-w-lg leading-relaxed">
-            Aqui a gente cuida de cada detalhe para você sentir em casa.
-            Defumados artesanais, hambúrgueres especiais e bebidas que combinam com cada momento.
+            No Horse, a gente acredita que boas refeições começam com paciência.
+            Carnes defumadas por horas, hambúrgueres preparados um a um, e um ambiente
+            que convida você a relaxar e aproveitar cada momento.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a href="#cardapio" className="bg-ember text-white px-7 py-4 rounded-sm font-semibold shadow-ember hover:translate-y-[-2px] transition-transform inline-flex items-center gap-2">
-              Conhecer o cardápio <ArrowRight className="w-4 h-4" />
+              Ver o que preparamos <ArrowRight className="w-4 h-4" />
             </a>
             <a href="#contato" className="border-2 border-[var(--ink)] px-7 py-4 rounded-sm font-semibold hover:bg-[var(--ink)] hover:text-white transition-colors">
-              Onde estamos
+              Como chegar
             </a>
           </div>
           <div className="mt-12 flex gap-8 text-sm">
@@ -153,7 +154,7 @@ function Hero() {
             </div>
             <div className="border-l border-black/10 pl-8">
               <div className="font-black text-2xl">★ 4.9</div>
-              <div className="text-[var(--ash)]">quem provou, adorou</div>
+              <div className="text-[var(--ash)]">quem vem, volta</div>
             </div>
           </div>
         </div>
