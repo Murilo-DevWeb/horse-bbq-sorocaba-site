@@ -178,25 +178,25 @@ function Services() {
     {
       icon: Beef,
       title: "Carne Defumada",
-      desc: "Brisket suculento, costela macia e pulled pork que desmancha na boca. Tudo preparado com calma, fogo baixo e muito carinho.",
+      desc: "Brisket que desmancha, costela na medida e pulled pork com aquela fumaça que só quem entende consegue fazer. Tudo no ponto certo, sem pressa.",
     },
     {
       icon: Sandwich,
       title: "Hambúrgueres",
-      desc: "Blend defumado da casa, pão brioche macio e ingredientes frescos. Uma combinação simples, mas feita com muito amor.",
+      desc: "Blend defumado da casa, pão brioche leve e ingredientes frescos. Simples na aparência, surpreendente no primeiro pedaço.",
     },
     {
       icon: Wine,
       title: "Bebidas",
-      desc: "Cervejas especiais, drinks leves, refrigerantes e sucos naturais. Tem opção para todo mundo aproveitar o momento.",
+      desc: "Cervejas especiais, drinks refrescantes e opções sem álcool. Uma boa bebida faz toda a diferença no final do dia.",
     },
   ];
   return (
     <section id="cardapio" className="py-24 md:py-32 relative" style={{backgroundColor:'var(--bone)'}}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">Cardápio</div>
-          <h2 className="text-4xl md:text-5xl text-balance">Boa comida leva tempo. <span className="text-[var(--ash)]">E aqui a gente tem paciência.</span></h2>
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--brand-red)] mb-4">O que servimos</div>
+          <h2 className="text-4xl md:text-5xl text-balance">A boa cozinha não tem atalhos. <span className="text-[var(--ash)]">Só dedicação.</span></h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {items.map((it, i) => (
@@ -218,7 +218,7 @@ function Services() {
             <Quote className="w-10 h-10 text-[var(--brand-red)]" />
             <div>
               <p className="text-2xl font-medium leading-snug">
-                "A carne sai quando está no ponto certo. Não antes, não depois. E quando chega à mesa, você entende por que valeu a espera."
+                "A gente não serve a carne antes da hora. Quando ela chega à sua mesa, você sente que cada minuto valeu a pena."
               </p>
               <div className="mt-6 text-sm text-white/60 uppercase tracking-wider">— A filosofia do Horse</div>
             </div>
